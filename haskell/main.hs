@@ -8,5 +8,5 @@ foreign import ccall "count_substrings"
 main :: IO ()
 main = do
     value <- newCString "banana"
-    haystack <- newCString "na"
-    count_substrings value haystack >>= print
+    substr <- newCString "na"
+    count_substrings value substr >>= print
