@@ -4,3 +4,4 @@
 main
 *.pyc
 *.hi
+/node_modules
