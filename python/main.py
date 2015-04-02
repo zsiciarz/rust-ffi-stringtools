@@ -1,4 +1,4 @@
 import ctypes
 
-stringtools = ctypes.CDLL("../target/libstringtools-261cf0fc14ce408c.so")
+stringtools = ctypes.CDLL("../target/debug/libstringtools-4149b7695a4035ac.so")
 print(stringtools.count_substrings(b"banana", b"na"))

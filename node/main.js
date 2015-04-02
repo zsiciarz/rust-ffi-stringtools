@@ -1,6 +1,6 @@
 var ffi = require('ffi');
 
-var stringtools = ffi.Library('../target/libstringtools-261cf0fc14ce408c.so', {
+var stringtools = ffi.Library('../target/debug/libstringtools-4149b7695a4035ac.so', {
       'count_substrings': ['int', ['string', 'string']]
 });
 
