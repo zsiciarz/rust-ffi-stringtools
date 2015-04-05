@@ -7,4 +7,4 @@ install:
 script:
   - cargo build
   - cd python && python main.py
-  - cd node && node main.js
+  - cd ../node && node main.js
