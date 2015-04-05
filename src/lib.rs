@@ -1,4 +1,4 @@
-#![feature(collections, libc)]
+#![feature(collections)]
 
 extern crate libc;
 
