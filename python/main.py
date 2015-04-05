@@ -1,4 +1,12 @@
 import ctypes
+import glob
+import sys
 
-stringtools = ctypes.CDLL("../target/debug/libstringtools-4149b7695a4035ac.so")
-print(stringtools.count_substrings(b"banana", b"na"))
+try:
+    library_name = glob.glob("../target/debug/libstringtools-*.so")[0]
+except IndexError:
+    print("Couldn't find dynamic library")
+    sys.exit(1)
+else:
+    stringtools = ctypes.CDLL(library_name)
+    print(stringtools.count_substrings(b"banana", b"na"))
