@@ -1,6 +1,13 @@
 var ffi = require('ffi');
+var glob = require('glob');
 
-var stringtools = ffi.Library('../target/debug/libstringtools-4149b7695a4035ac.so', {
+var library_name = glob.sync('../target/debug/libstringtools-*.so')[0];
+if (!library_name) {
+    console.log("Couldn\'t find dynamic library");
+    process.exit(1);
+}
+
+var stringtools = ffi.Library(library_name, {
       'count_substrings': ['int', ['string', 'string']]
 });
 
