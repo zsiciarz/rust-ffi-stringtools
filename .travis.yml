@@ -4,7 +4,7 @@ rust:
 install:
   - nvm install stable
   - nvm use stable
-  - npm install -g ffi
+  - npm install ffi
 script:
   - cargo build
   - cd python && python main.py
