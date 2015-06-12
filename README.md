@@ -7,9 +7,6 @@ A collection of examples how to use Rust libraries from other languages.
 
 Works on Rust 1.0 stable.
 
-See [my article on calling Rust from other languages](https://siciarz.net/24-days-of-rust-calling-rust-from-other-languages/)
-for a more extensive description.
-
 Author
 ======
 
