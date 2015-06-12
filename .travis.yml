@@ -2,6 +2,7 @@ sudo: false
 language: rust
 rust:
   - stable
+  - beta
   - nightly
 install:
   - nvm install stable
