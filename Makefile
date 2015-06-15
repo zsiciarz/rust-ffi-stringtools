@@ -1,5 +1,7 @@
 .PHONY: c c_sharp go haskell nim node python ruby clean
 
+all: c c_sharp go haskell nim node python ruby
+
 lib:
 	cargo build
 
