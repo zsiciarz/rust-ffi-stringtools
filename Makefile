@@ -1,4 +1,4 @@
-.PHONY: c c_sharp go haskell nim node python ruby
+.PHONY: c c_sharp go haskell nim node python ruby clean
 
 lib:
 	cargo build
@@ -26,3 +26,6 @@ python: lib
 
 ruby: lib
 	cd ruby && ruby main.rb
+
+clean:
+	cargo clean && rm c/main c_sharp/main.exe haskell/main
