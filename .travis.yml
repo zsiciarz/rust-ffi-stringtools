@@ -10,7 +10,6 @@ install:
   - npm install ffi glob
   - gem install ffi
 script:
-  - cargo build
-  - cd python && python main.py
-  - cd ../node && node main.js
-  - cd ../ruby && ruby main.rb
+  - make node
+  - make python
+  - make ruby
