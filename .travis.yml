@@ -11,6 +11,7 @@ install:
   - gem install ffi
 script:
   - cargo build
-  - cd python && python main.py
+  - cd c && gcc main.c -L ../target/debug -lstringtools -o main && ./main
+  - cd ../python && python main.py
   - cd ../node && node main.js
   - cd ../ruby && ruby main.rb
