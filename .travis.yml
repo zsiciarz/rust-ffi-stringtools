@@ -11,7 +11,7 @@ install:
   - gem install ffi
 script:
   - cargo build
-  - cd c && gcc main.c -L ../target/debug -lstringtools -o main && ./main
+  - cd c && gcc main.c -L ../target/debug -lstringtools -o main && LD_LIBRARY_PATH=../target/debug ./main
   - cd ../python && python main.py
   - cd ../node && node main.js
   - cd ../ruby && ruby main.rb
