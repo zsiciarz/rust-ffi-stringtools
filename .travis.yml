@@ -4,6 +4,8 @@ rust:
   - stable
   - beta
   - nightly
+go:
+  - tip
 install:
   - nvm install stable
   - nvm use stable
@@ -15,3 +17,4 @@ script:
   - cd ../python && python main.py
   - cd ../node && node main.js
   - cd ../ruby && ruby main.rb
+  - go version
