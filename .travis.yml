@@ -4,8 +4,6 @@ rust:
   - stable
   - beta
   - nightly
-ghc:
-  - 7.8
 go:
   - tip
 install:
@@ -20,4 +18,3 @@ script:
   - cd ../python && python main.py
   - cd ../node && node main.js
   - cd ../ruby && ruby main.rb
-  - ghc --version
