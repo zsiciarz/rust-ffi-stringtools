@@ -14,7 +14,7 @@ install:
 script:
   - cargo build
   - cd c && gcc main.c -L ../target/debug -lstringtools -o main && LD_LIBRARY_PATH=../target/debug ./main
+  - cd ../go && LD_LIBRARY_PATH=../target/debug go run main.go
   - cd ../python && python main.py
   - cd ../node && node main.js
   - cd ../ruby && ruby main.rb
-  - go version
