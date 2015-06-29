@@ -4,6 +4,10 @@ rust:
   - stable
   - beta
   - nightly
+addons:
+  apt:
+    packages:
+      - ghc
 go:
   - tip
 install:
@@ -18,3 +22,4 @@ script:
   - cd ../python && python main.py
   - cd ../node && node main.js
   - cd ../ruby && ruby main.rb
+  - ghc --version
