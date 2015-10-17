@@ -6,4 +6,4 @@ module StringTools
   attach_function :count_substrings, [:string, :string], :int
 end
 
-puts StringTools.count_substrings("banana", "na")
+puts StringTools.count_substrings("bąnana", "na")

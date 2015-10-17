@@ -8,6 +8,6 @@ public class StringTools
 
     static public void Main()
     {
-        Console.WriteLine(count_substrings("banana", "na"));
+        Console.WriteLine(count_substrings("bąnana", "na"));
     }
 }

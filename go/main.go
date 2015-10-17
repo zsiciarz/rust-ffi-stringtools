@@ -6,7 +6,7 @@ import "C"
 import "fmt"
 
 func main() {
-    value := C.CString("banana")
+    value := C.CString("bąnana")
     substr := C.CString("na")
     fmt.Println(C.count_substrings(value, substr))
 }
