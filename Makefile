@@ -26,7 +26,7 @@ node: lib
 	cd node && node main.js
 
 python: lib
-	cd python && python main.py
+	cd python && python3 main.py
 
 ruby: lib
 	cd ruby && ruby main.rb
