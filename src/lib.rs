@@ -18,14 +18,5 @@ pub extern "C" fn count_substrings(value: *const c_char, substr: *const c_char) 
 }
 
 fn rust_substrings(value: &str, substr: &str) -> i32 {
-    let mut count = 0;
-    let substr_len = substr.len();
-    let upper_bound = value.len() - substr_len + 1;
-    for c in 0..upper_bound {
-        let possible_match = &value[c..c+substr_len];
-        if possible_match == substr {
-            count += 1;
-        }
-    }
-    count
+    value.matches(substr).count() as i32
 }
