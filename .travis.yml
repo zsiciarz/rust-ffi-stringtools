@@ -14,8 +14,7 @@ addons:
       - gcc-4.8
       - g++-4.8
       - ghc
-python:
-  - "3.5"
+      - python3
 go:
   - tip
 install:
