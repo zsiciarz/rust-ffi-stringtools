@@ -18,6 +18,12 @@ addons:
 go:
   - tip
 install:
+  - wget http://nim-lang.org/download/nim-0.12.0.tar.xz
+  - tar xf nim-0.12.0.tar.xz
+  - cd nim-0.12.0
+  - sh build.sh
+  - cd ..
+  - export PATH=`pwd`/nim-0.12.0/bin:$PATH
   - nvm install stable
   - nvm use stable
   - npm install ffi glob
@@ -28,5 +34,6 @@ script:
   - cd ../haskell && ghc --make main.hs -L../target/debug -lstringtools -o main && LD_LIBRARY_PATH=../target/debug ./main
   - cd ../go && LD_LIBRARY_PATH=../target/debug go run main.go
   - cd ../python && python3 main.py
+  - cd ../nim && nim c -r --verbosity:0 main.nim
   - cd ../node && node main.js
   - cd ../ruby && ruby main.rb
